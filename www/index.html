@@ -6,17 +6,22 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Camile</title>
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script>
+         $('#content').load('http://projects.tiremaster.net/voice/voice2/mobile/answer.php');
+        </script>
     </head>
     <body>
     	<audio id="myAudio" autoplay="autoplay">
     		<source src="res/sound/saludo.mp3"></source>
     	</audio>
     	<h1>Mi nombre es Camil, En que puedo ayudarte?</h1>
-	    <form action="http://projects.tiremaster.net/voice/voice2/mobile/answer.php" method="post">
+	    <form action="" method="post">
 	     <label>Tu respuesta: </label>
 	     <input name="respuesta">
-	     <input type="submit" value="Enviar">
+	     <input type="button" onclick="click();" value="Enviar">
 	    </form>
+	    <div id="content"></div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
