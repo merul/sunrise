@@ -8,6 +8,12 @@
         <link rel="stylesheet" href="lib/bootstrap3/css/bootstrap.min.css" media="screen">
         <title>Camile</title>
         <script>
+         function clickCero(){
+         	$("#AudioCero").get(0).play();
+         }
+         function clickUno(){
+         	$("#AudioUno").get(0).play();
+         }
          function clicked(){
          	$.ajax({
 		      type : 'GET',
@@ -45,8 +51,8 @@
 	     <button onclick="clicked();">Enviar</button>
 	    </form>
 	    <p>
-		  <button type="button" class="btn btn-primary btn-lg">0</button>
-		  <button type="button" class="btn btn-default btn-lg">1</button>
+		  <button type="button" onclick="clickCero();" class="btn btn-primary btn-lg">0</button>
+		  <button type="button" onclick="clickUno();" class="btn btn-default btn-lg">1</button>
 		</p>
 	    <div id="content"></div>
         <!-- <script type="text/javascript" src="phonegap.js"></script> -->
