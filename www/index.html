@@ -5,20 +5,20 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="lib/bootstrap3/css/bootstrap.min.css" media="screen">
         <title>Camile</title>
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
         <script>
          function clicked(){
          	$.ajax({
 		      type : 'GET',
-		      url : "projects.tiremaster.net/voice/voice2/mobile/answer.php",
+		      url : "http://projects.tiremaster.net/voice/voice2/mobile/answer.php",
 		      dataType : "text",
 		      success: function(jsonText) {
 		         var json = $.parseJSON(jsonText);
-		         $( ".info" ).html("success");
+		         $("#content").html("success");
 		      },
 		      error: function(xhr, textStatus, errorThrown) {
-		         $( ".info" ).html("Error: " + textStatus + ":" + errorThrown);
+		         $("#content").html("Error: " + textStatus + ":" + errorThrown);
 		      }
 		    });
          	//$('#content').load('http://projects.tiremaster.net/voice/voice2/mobile/answer.php');
@@ -29,15 +29,30 @@
     	<audio id="myAudio" autoplay="autoplay">
     		<source src="res/sound/saludo.mp3"></source>
     	</audio>
+    	<audio id="AudioUno">
+    		<source src="res/sound/uno.mp3"></source>
+    	</audio>
+    	<audio id="AudioCero">
+    		<source src="res/sound/cero.mp3"></source>
+    	</audio>
+    	<audio id="myAudio" autoplay="autoplay">
+    		<source src="res/sound/saludo.mp3"></source>
+    	</audio>
     	<h1>Mi nombre es Camil, En que puedo ayudarte?</h1>
 	    <form action="" method="post">
 	     <label>Tu respuesta: </label>
 	     <input name="respuesta">
 	     <button onclick="clicked();">Enviar</button>
 	    </form>
+	    <p>
+		  <button type="button" class="btn btn-primary btn-lg">0</button>
+		  <button type="button" class="btn btn-default btn-lg">1</button>
+		</p>
 	    <div id="content"></div>
         <!-- <script type="text/javascript" src="phonegap.js"></script> -->
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="lib/bootstrap3/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             //app.initialize();
         </script>
