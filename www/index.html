@@ -9,7 +9,19 @@
         <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
         <script>
          function clicked(){
-         	$('#content').load('http://projects.tiremaster.net/voice/voice2/mobile/answer.php');
+         	$.ajax({
+		      type : 'GET',
+		      url : "projects.tiremaster.net/voice/voice2/mobile/answer.php",
+		      dataType : "text",
+		      success: function(jsonText) {
+		         var json = $.parseJSON(jsonText);
+		         $( ".info" ).html("success");
+		      },
+		      error: function(xhr, textStatus, errorThrown) {
+		         $( ".info" ).html("Error: " + textStatus + ":" + errorThrown);
+		      }
+		    });
+         	//$('#content').load('http://projects.tiremaster.net/voice/voice2/mobile/answer.php');
          }
          </script>
     </head>
