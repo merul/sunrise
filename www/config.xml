@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml --><widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.merul.sunrise" version="0.0.1">
 
-    <name>Merul Sunrise</name>
+    <name>Camile</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Computer Aided Multi-Interface Language Environment
     </description>
 
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@merul.com" href="http://merul.com">
+        Merul Team
     </author>
 
     <!--
