@@ -15,7 +15,7 @@
          	$("#AudioUno").get(0).play();
          }
          function clickUno(){
-         	$.ajax({
+         	/*$.ajax({
 		      type : 'GET',
 		      url : "http://projects.tiremaster.net/voice/voice2/mobile/answer.php",
 		      dataType : "text",
@@ -26,8 +26,8 @@
 		      error: function(xhr, textStatus, errorThrown) {
 		         $("#content").html("Error: " + textStatus + ":" + errorThrown);
 		      }
-		    });
-         	//$('#content').load('http://projects.tiremaster.net/voice/voice2/mobile/answer.php');
+		    });*/
+         	$('#content').load('http://projects.tiremaster.net/voice/voice2/mobile/answer.php');
          }
          </script>
     </head>
