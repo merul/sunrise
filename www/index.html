@@ -11,10 +11,10 @@
          function clickCero(){
          	$("#AudioCero").get(0).play();
          }
-         function clickUno(){
+         function clicked(){
          	$("#AudioUno").get(0).play();
          }
-         function clicked(){
+         function clickUno(){
          	$.ajax({
 		      type : 'GET',
 		      url : "http://projects.tiremaster.net/voice/voice2/mobile/answer.php",
@@ -45,6 +45,7 @@
     		<div class="row">
     		  <div class="col-xs-12">
     		  	<h1>Mi nombre es Camil, En que puedo ayudarte?</h1>
+    		  	<span id="content"></span>
     		  </div>
     		</div>
     		<!-- <div class="row">
